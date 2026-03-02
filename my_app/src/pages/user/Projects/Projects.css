@@ -1,0 +1,176 @@
+.projects-page {
+  padding: 3rem 0;
+  background: var(--white);
+}
+
+.projects-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.projects-header p {
+  color: var(--gray);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 1rem auto 0;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: var(--white);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: all 0.3s;
+  position: relative;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.project-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--secondary);
+  color: var(--white);
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  z-index: 2;
+}
+
+.project-image {
+  height: 240px;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.1);
+}
+
+.project-details {
+  padding: 1.5rem;
+}
+
+.project-details h3 {
+  font-size: 1.3rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem 0;
+  color: var(--gray);
+  font-size: 0.95rem;
+}
+
+.project-meta span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.project-budget {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--secondary);
+  margin: 0.5rem 0;
+}
+
+/* Map link button styling */
+.map-link-btn {
+  background-color: #f0f7ff;  /* Light blue background */
+  border: 1px solid #cce5ff;
+  color: #0056b3 !important;   /* Dark blue text */
+  transition: all 0.2s;
+  padding: 0.6rem 1rem;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.map-link-btn:hover {
+  background-color: #e1f0fa;
+  border-color: #b8daff;
+  color: #004085 !important;
+  transform: translateY(-1px);
+}
+
+.map-link-btn svg {
+  margin-right: 4px;
+}
+
+/* Remove old map container styles if they exist */
+/* .map-container, .map-placeholder { 
+   display: none; 
+} */
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .project-image {
+    height: 200px;
+  }
+}
+/* Filter buttons */
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.filter-btn {
+  padding: 0.6rem 1.5rem;
+  border: 2px solid var(--secondary);
+  background: transparent;
+  color: var(--secondary);
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter-btn:hover {
+  background: var(--secondary);
+  color: white;
+}
+
+.filter-btn.active {
+  background: var(--secondary);
+  color: white;
+}
+
+/* Make service cards clickable (add to Home.css) */
+.service-card {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}

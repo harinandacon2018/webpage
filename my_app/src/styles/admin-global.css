@@ -1,0 +1,111 @@
+/* styles/admin-global.css */
+:root {
+  --admin-primary: #0a1e2f;      /* darker navy for admin */
+  --admin-secondary: #b3864a;    /* darker gold */
+  --admin-bg: #f4f7fc;
+  --admin-sidebar-bg: #132b3f;
+  --admin-card-bg: #ffffff;
+  --admin-text: #2c3e50;
+  --admin-border: #e0e7ef;
+}
+
+.admin-dashboard {
+  display: flex;
+  min-height: 100vh;
+  background: var(--admin-bg);
+}
+
+.admin-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 250px; /* width of sidebar */
+  transition: margin-left 0.3s;
+}
+
+.admin-main.sidebar-collapsed {
+  margin-left: 70px;
+}
+
+.page-title {
+  font-size: 2rem;
+  color: var(--admin-primary);
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.card {
+  background: var(--admin-card-bg);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  margin-bottom: 1.5rem;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.status-pending { background: #fff3cd; color: #856404; }
+.status-approved { background: #d4edda; color: #155724; }
+.status-in-progress { background: #cce5ff; color: #004085; }
+.status-completed { background: #d1e7dd; color: #0f5132; }
+.status-rejected { background: #f8d7da; color: #721c24; }
+.status-draft { background: #e2e3e5; color: #383d41; }
+.status-generated { background: #d1ecf1; color: #0c5460; }
+.status-paid { background: #d4edda; color: #155724; }
+
+.btn {
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.btn-primary {
+  background: var(--admin-primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #1a3f5c;
+}
+
+.btn-secondary {
+  background: var(--admin-secondary);
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #a0713e;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--admin-primary);
+  color: var(--admin-primary);
+}
+
+.btn-outline:hover {
+  background: var(--admin-primary);
+  color: white;
+}
+
+.icon-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--admin-primary);
+  margin: 0 0.25rem;
+}
+
+.icon-btn:hover {
+  color: var(--admin-secondary);
+}
